@@ -25,7 +25,8 @@ L'infrastruttura di backend è ospitata su **Amazon Web Services (AWS)** e utili
 
 
 
-(Riferimento immagine dalla slide: Diagramma architetturale OpsWorks Stack e PHP App Server Layer )
+<img width="689" height="632" alt="image" src="https://github.com/user-attachments/assets/7ede4953-89cd-4810-835c-04b1501e8619" />
+
 
 ---
 
@@ -43,7 +44,8 @@ La comunicazione tra l'app Android e il database AWS avviene tramite richieste H
 
 * **Flusso:** Il client invia una request, il server PHP elabora e risponde.
 
-(Riferimento immagine dalla slide: Schema Client Request / Server Response con metodi HTTP )
+<img width="957" height="399" alt="image" src="https://github.com/user-attachments/assets/148f29a6-c884-4811-bb8f-271c079575d8" />
+
 
 ---
 
@@ -64,7 +66,8 @@ La classe `TCPClient` gestisce il ciclo di vita della connessione socket:
 **Codice: Connessione e Loop di Ascolto**
 
 
-(Snippet del metodo `run()` che mostra la creazione della socket e il loop di lettura `while(run)` )
+<img width="1253" height="989" alt="image" src="https://github.com/user-attachments/assets/98bf49a1-77ea-45cf-89ef-3d558075e419" />
+
 
 #### Invio dei Messaggi
 L'invio dei messaggi avviene tramite il metodo `sendMessage`, che scrive sul buffer di output. Per non bloccare il thread principale (UI Thread) di Android, l'invio è gestito da un task asincrono: `SendMessageTask`.
@@ -72,15 +75,20 @@ L'invio dei messaggi avviene tramite il metodo `sendMessage`, che scrive sul buf
 **Codice: Metodo SendMessage e AsyncTask**
 
 
-(Snippet che mostra la classe `SendMessageTask` che estende `AsyncTask` e invoca `mTcp.sendMessage` )
+<img width="774" height="286" alt="image" src="https://github.com/user-attachments/assets/1439975a-7c51-40d9-bab9-10380aecaa79" />
+
+<img width="805" height="696" alt="image" src="https://github.com/user-attachments/assets/86dfc351-88cb-4820-b7ed-3382da21674c" />
+
 
 #### Ricezione e Aggiornamento UI
 Quando il client riceve un messaggio dal server, questo viene elaborato nel metodo `messageReceived`. Tramite `publishProgress` e `onProgressUpdate`, l'interfaccia utente (ChatActivity) viene aggiornata in tempo reale.
 
 **Codice: Ricezione Messaggio**
 
+<img width="1003" height="365" alt="image" src="https://github.com/user-attachments/assets/5af7bec2-e1d9-4272-8924-f286b6615892" />
 
-(Snippet che mostra la gestione del messaggio in entrata e l'aggiornamento dell'UI con `publishProgress` )
+<img width="1096" height="355" alt="image" src="https://github.com/user-attachments/assets/34d43da8-0eed-4c76-9269-89ad2c21905f" />
+
 
 ---
 
