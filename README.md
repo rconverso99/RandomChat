@@ -102,3 +102,8 @@ L'applicazione offre le seguenti feature lato client:
 * 💬 **Chat:** Scambio di messaggi testuali in tempo reale.
 
 ---
+Demo:
+
+https://github.com/user-attachments/assets/7a5f0043-fd88-4f41-a8d4-ea9b938340f6
+
+
