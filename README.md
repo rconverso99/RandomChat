@@ -2,7 +2,8 @@
 💬**RandomChats** è un'applicazione di messaggistica istantanea basata su architettura Client-Server, sviluppata per dispositivi Android. Il progetto gestisce l'autenticazione, la creazione di stanze e lo scambio di messaggi in tempo reale.
 
 ## 👥 Autore
-* **Riccardo Converso** 
+* **Riccardo Converso**
+* **Alessio Coppola** 
 
 *Corso:* LSO_2122_14 
 
